@@ -203,4 +203,4 @@ var updateCanvas = function(){
 }
 
 
-console.log('asd')
+console.log('asd :D!!!ss')
