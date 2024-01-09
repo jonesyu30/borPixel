@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <link rel="manifest" href="./manifest.json">
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png">
+    <title>BorPixel PWA</title>
+    
+    <meta name="description" content="see how PWA works on a bor iPhone :D">
+
+    <meta name="theme-color" content="#FF5F00">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register("./service-worker.js");
+		}
+	</script>
+    <canvas id="canvas"></canvas>
+    <script src="./main.js"></script>
+</body>
+</html>
