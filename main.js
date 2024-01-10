@@ -74,7 +74,7 @@ canvas.addEventListener("touchmove", (event) =>{
                                             lastTouches[0].clientY - lastTouches[1].clientY)
             var thisDistance = Math.hypot(event.touches[0].clientX - event.touches[1].clientX, 
                                             event.touches[0].clientY - event.touches[1].clientY)
-            handleZoom((lastDistance - thisDistance)*10, center.x, center.y)
+            handleZoom((lastDistance - thisDistance)*5, center.x, center.y)
 
             lastTouches[0] = event.touches[0];
             lastTouches[1] = event.touches[1];
@@ -168,7 +168,7 @@ var handleZoom = function(zoomScale, centerX, centerY){//scale = -100 or 100
         coordsShift.y = deltaCoordsShift.y;
     }
 
-    visibleBox = Math.floor(Math.max(canvas.width/pixelPerBox, canvas.height/pixelPerBox))
+    visibleBox = Math.floor(Math.max(canvas.width/pixelPerBox, canvas.height/pixelPerBox));
     updateCanvas();
 }
 
@@ -203,4 +203,4 @@ var updateCanvas = function(){
 }
 
 
-console.log('this is the main one!!!!!!!!!!')
+console.log('i will push this...')
